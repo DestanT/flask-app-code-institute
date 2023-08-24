@@ -30,7 +30,7 @@ def about_member(member_name):
     return render_template("member.html", member=member)  # 1st member is variable for member.html, 2nd = object created above
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
     return render_template("contact.html", page_title="Contact")
 
